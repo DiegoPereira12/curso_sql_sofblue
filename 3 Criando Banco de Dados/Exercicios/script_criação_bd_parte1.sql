@@ -21,12 +21,14 @@ create table curso
 (
 	codigo integer unsigned not null auto_increment,
     curso varchar(64) not null,
-	valor double not null,
+    tipo integer unsigned not null,
+    instrutor integer unsigned not null,
+    valor double not null,
 	primary key (codigo),
     index fk_tipo(tipo),
     index fk_instrutor(instrutor),
-    foreign key (tipo) references tipo (CODIGO),
-	foreign key (instrutor) references instrutor (codigo)
+    constraint fk_curso_tipo foreign key (tipo) references tipo (codigo),
+    constraint fk_curso_instrutor foreign key (instrutor) references instrutor (codigo)
 );
 
 create table aluno 
@@ -40,11 +42,12 @@ create table aluno
 
 create table pedido
 (
-	codigo int unsigned not null auto_increment,
+	codigo integer unsigned not null auto_increment,
     aluno integer unsigned not null,
     datahora datetime not null,
+    primary key (codigo),
     index  fk_aluno(aluno),
-	foreign key(aluno) references aluno(codigo)
+    foreign key(aluno) references aluno(codigo)
 );
 
 create table pedido_detalhe
@@ -59,3 +62,5 @@ create table pedido_detalhe
 	foreign key(curso) references curso(codigo)
 
 );
+
+
