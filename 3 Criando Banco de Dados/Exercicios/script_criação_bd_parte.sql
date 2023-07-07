@@ -63,4 +63,21 @@ create table pedido_detalhe
 
 );
 
+# Inclua a coluna DATA_NASCIMENTO na tabela ALUNO do tipo string, de tamanho 10 caracteres
+alter table aluno add data_nascimento varchar(10);
+
+# Altere a coluna DATA_NASCIMENTO para NASCIMENTO e seu tipo de dado para DATE
+alter table aluno change data_nascimento nascimento date null;
+
+# Crie um novo índice na tabela ALUNO, para o campo ALUNO
+alter table aluno add index index_aluno(aluno);
+
+# Inclua o campo EMAIL na tabela INSTRUTOR, com tamanho de 100 caracteres
+alter table instrutor add email varchar(100) not null;
+
+# Crie um novo índice na tabela CURSO, para o campo INSTRUTOR - Informação duplicada
+alter table curso add index index_instrutor(instrutor);
+
+# Remova o campo EMAIL da tabela INSTRUTOR
+alter table instrutor drop email;
 
