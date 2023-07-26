@@ -8,12 +8,18 @@
 
 ## 3) Criando Banco de Dados
 - Criando Banco de Dados - Teórica
-- Criando Banco de Dados - Teórica
+- Criando Banco de Dados - Prática
 - Exercicios
 - Avaliação do módulo
 
 ## 4) Manipulando Dados
 - Manipulando Dados - Teórica
-- Manipulando Dados - Teórica
+- Manipulando Dados - Prática
+- Exercicios
+- Avaliação do módulo
+
+## 5) Relacionamentos e Visões
+- Relacionamentos e Visões - Teórica
+- 5) Relacionamentos e Visões - Prática 
 - Exercicios
 - Avaliação do módulo
